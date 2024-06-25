@@ -22,6 +22,7 @@ for t in range(T):
     n, s, e, k = map(int, input().split())
     a = list(map(int, input().split()))
     a = a[s-1:e]
+    # 오름 차순
     a.sort()
     print(f"#{t+1} {a[k-1]}")
 
