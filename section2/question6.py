@@ -31,20 +31,39 @@ max_idx = 0
 # print(number[max_idx])
 
 
-# 강의 풀이
-# 개념 : while, def - return
+# # 강의 풀이 (1)
+# # 개념 : while, def - return
+# def digit_sum(x):
+#     sum_num = 0
+#     while x > 0:
+#         sum_num += x % 10
+#         x = x // 10
+#     return sum_num
+#
+#
+# for i in number:
+#     tot = digit_sum(i)
+#     if tot > max_sum:
+#         max_sum = tot
+#         result = i
+#
+# print(result)
+
+
+# 강의 풀이 (2)
 def digit_sum(x):
     sum_num = 0
-    while x > 0:
-        sum_num += x % 10
-        x = x // 10
+    for i in str(x):
+        sum_num += int(i)
+    #     print(i, end=' ')
+    # print()
     return sum_num
 
 
-for i in number:
-    tot = digit_sum(i)
+for x in number:
+    tot = digit_sum(x)
     if tot > max_sum:
         max_sum = tot
-        result = i
+        result = x
 
 print(result)
